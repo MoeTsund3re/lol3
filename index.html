@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мегастрой</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/baza/logo.svg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo-block">
+                    <img src="assets/img/baza/logo.svg" alt="logo">
+                    <p class="logo-text">Мегастрой</p>
+                </a>
+                <nav class="menu">
+                    <ul class="nav-links">
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#news">Новости</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="contact-info">
+                    <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                    <button class="contact-btn">Обратный звонок</button>
+                </div>
+
+                <div class="menu-mob">
+                    <input type="checkbox" id="burger">
+                    <label for="burger"></label>
+                    <div class="menu_nav">
+                        <nav>
+                            <a class="active" href="#">Главная</a>
+                            <a href="#">О нас</a>
+                            <a href="#">Каталог</a>
+                            <a href="#">Контакты</a>
+                            <button class="contact-btn">Обратный звонок</button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- end-header -->
+
+    <!-- main -->
+    <main>
+
+        <!-- banner -->
+        <div class="banner active">
+            <div class="container">
+                <div class="banner__inner">
+                    <div class="banner__content">
+                        <h1 class="banner__title">
+                            <span>Мега</span>строй: творческий подход к строительству
+                        </h1>
+                        <a href="#" class="orange-btn">Каталог</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="container">
+                <div class="banner__inner banner2">
+                    <div class="banner__content">
+                        <h1 class="banner__title">
+                            <span>Качество</span> и надежность в каждом проекте
+                        </h1>
+                        <a href="#" class="orange-btn">Каталог</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="container">
+                <div class="banner__inner banner3">
+                    <div class="banner__content">
+                        <h1 class="banner__title">
+                            <span>Ваш</span> дом мечты ждет вас
+                        </h1>
+                        <a href="#" class="orange-btn">Каталог</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            let currentIndex = 0;
+            const banners = document.querySelectorAll('.banner');
+            const totalBanners = banners.length;
+
+            function showBanner(index) {
+                banners.forEach((banner, i) => {
+                    banner.classList.remove('active');
+                    if (i === index) {
+                        banner.classList.add('active');
+                    }
+                });
+            }
+
+            function nextBanner() {
+                currentIndex = (currentIndex + 1) % totalBanners;
+                showBanner(currentIndex);
+            }
+
+            showBanner(currentIndex);
+
+            setInterval(nextBanner, 4000);
+
+        </script>
+
+        <!-- end-banner -->
+
+        <!-- about -->
+        <div class="about">
+            <div class="container">
+                <h2 class="block__title">О компании</h2>
+                <div class="about__inner">
+                    <div class="about__content">
+                        <p class="about-text">
+                            <span>Мегастрой</span> — одна из ведущих строительных компаний в стране, специализирующаяся на жилом и коммерческом строительстве. Основанная в начале 2000-х годов, компания быстро зарекомендовала себя на рынке благодаря качеству своих проектов и инновационным подходам.
+                        </p>
+                        <p class="about-text">
+                            Компания <span>Мегастрой</span> была основана в 2002 году группой энтузиастов, стремящихся изменить облик городов и создать комфортное жилье для людей. С первых дней своего существования "Мегастрой" фокусировалась на использовании современных технологий и высококачественных материалов.
+                            В 2005 году компания завершила свой первый крупный проект — жилой комплекс "Солнечный", который стал символом нового подхода к строительству. С тех пор "Мегастрой" расширила свой портфель проектов, включая как жилые комплексы, так и офисные здания, торговые центры и инфраструктурные объекты.
+                        </p>
+                    </div>
+                    <img src="assets/img/about/about.webp" alt="about">
+                </div>
+            </div>
+        </div>
+        <!-- end-about -->
+
+        <!-- yslygi -->
+        <div class="yslygi">
+            <div class="container">
+                <h2 class="block__title">
+                    Наши услуги
+                </h2>
+                <div class="yslygi__inner">
+                    <div class="card">
+                        <img src="assets/img/yslygi/card1.webp" alt="card-img">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <span>Проектирование</span>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Разработка дизайна, архитектурных решений и инженерных расчётов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/yslygi/card2.webp" alt="card-img">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <span>Строительство</span>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Возведение фундамента, строительство каркаса здания, установка коммуникаций и систем отопления, проведение отделочных работ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/yslygi/card3.webp" alt="card-img">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <span>Ремонт и реконструкция</span>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Обновление и адаптация существующих домов под современные требования.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            const accordions = document.querySelectorAll('.accordion');
+
+            accordions.forEach(accordion => {
+                const header = accordion.querySelector('.accordion-header');
+                const content = accordion.querySelector('.accordion-content');
+                const toggle = accordion.querySelector('.toggle');
+
+                header.addEventListener('click', () => {
+                    const isOpen = content.style.display === 'block';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    toggle.textContent = isOpen ? '+' : '-';
+                });
+            });
+        </script>
+        <!-- end-yslugi -->
+
+
+        <!-- project -->
+        <div class="project">
+            <div class="container">
+                <h2 class="block__title">
+                    Наши проэкты
+                </h2>
+                <div class="filter">
+                    <a class="active-a" href="#">Жилые комплексы</a>
+                    <a class="active-a2" href="№">Коммерческая недвижимость</a>
+                </div>
+                <div class="project__inner">
+                    <div class="project-card">
+                        <img src="assets/img/project/house1.jpg" alt="project-card__img">
+                        <div class="project-top">
+                            <h3 class="project-title">
+                                Бриз
+                            </h3>
+                            <p class="project-data">
+                                13.12.2024
+                            </p>
+                        </div>
+                        <p class="project-sity">
+                            Москва
+                        </p>
+                        <a href="#" class="orange-btn">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/img/project/house2.jpg" alt="project-card__img">
+                        <div class="project-top">
+                            <h3 class="project-title">
+                                Венера
+                            </h3>
+                            <p class="project-data">
+                                03.12.2024
+                            </p>
+                        </div>
+                        <p class="project-sity">
+                            Казань
+                        </p>
+                        <a href="#" class="orange-btn">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/img/project/house3.jpg" alt="project-card__img">
+                        <div class="project-top">
+                            <h3 class="project-title">
+                                Юпитер
+                            </h3>
+                            <p class="project-data">
+                                23.12.2024
+                            </p>
+                        </div>
+                        <p class="project-sity">
+                            Москва
+                        </p>
+                        <a href="#" class="orange-btn">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end-project -->
+
+        <!-- news -->
+        <div class="news">
+            <div class="container">
+                <h2 class="block__title">
+                    Наши новости
+                </h2>
+                <div class="news__inner">
+                    <div class="news-card">
+                        <div class="news-card__top">
+                            <h3 class="news-card__title">
+                                Мы завершили возведение первого в стране экологичного жилого комплекса
+                            </h3>
+                            <p class="news-card__data">
+                                20.04.2025
+                            </p>
+                        </div>
+                        <p class="news-card__text">
+                            Мы представила новую стратегию, направленную на внедрение цифровых технологий в строительный процесс. Компания планирует использовать дронов для мониторинга строительства, а также 3D-печать для создания элементов зданий...
+                        </p>
+                        <a href="#" class="pod">
+                            Подробнее →
+                        </a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card__top">
+                            <h3 class="news-card__title">
+                                Мы внедряет инновационные технологии в процесс строительства
+                            </h3>
+                            <p class="news-card__data">
+                                20.05.2025
+                            </p>
+                        </div>
+                        <p class="news-card__text">
+                            Мы объявили о завершении строительства уникального жилого комплекса, который стал первым в стране полностью экологически чистым проектом. Комплекс оснащен солнечными панелями, системами сбора дождевой воды и зелеными крышами...
+                        </p>
+                        <a href="#" class="pod">
+                            Подробнее →
+                        </a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card__top">
+                            <h3 class="news-card__title">
+                                Мы запускаем программу по обучению молодых специалистов"
+                            </h3>
+                            <p class="news-card__data">
+                                22.04.2025
+                            </p>
+                        </div>
+                        <p class="news-card__text">
+                            Мы объявила о запуске программы стажировок для студентов строительных специальностей. Цель инициативы — подготовить новое поколение специалистов, обучая их современным технологиям и методам строительства...
+                        </p>
+                        <a href="#" class="pod">
+                            Подробнее →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end-news -->
+
+        <!-- contact -->
+        <div class="contact">
+            <div class="container">
+                <div class="contact__inner">
+                    <img src="assets/img/contact/map.png" alt="map">
+                    <div class="contact__content">
+                        <h2 class="block__title">
+                            Наши контакты
+                        </h2>
+                        <form action="" class="contact__form">
+                            <label for="">
+                                Ваше имя:
+                            </label>
+                            <input type="text" placeholder="Введите">
+                            <label for="">
+                                Ваше email:
+                            </label>
+                            <input type="text" placeholder="Введите">
+                            <label for="">
+                                Ваше телефон:
+                            </label>
+                            <input type="text" placeholder="Введите">
+                            <a href="#" class="orange-btn btn2">Заказать звонок</a>
+                        </form>
+                        <div class="social-text">
+                            <p>E-mail:</p>
+                            <a href="mailto:megastroy@list.ru">megastroy@list.ru</a>
+                        </div>
+                        <div class="social-text">
+                            <p>Телефон:</p>
+                            <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end-contact -->
+
+
+
+
+
+
+    </main>
+    <!-- end-main -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer-top">
+                    <div class="container">
+                        <div class="footer-top__inner">
+                            <a href="#" class="polit">Политика конфиденциальности</p>
+                            <div class="icons">
+                                <a href="#">
+                                    <img src="assets/img/footer/tg.svg" alt="icon">
+                                </a>
+                                <a href="#">
+                                    <img src="assets/img/footer/vk.svg" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p class="copy">© Киямов</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end-footer -->
+
+</body>
+</html>
